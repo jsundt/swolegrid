@@ -25,8 +25,8 @@
   @each $break in map-keys($breakpoints) {
     @include media-breakpoint-up($break) {
       .bench-#{$break}-first, .item-#{$break}-first { order: -1; }
-      .bench-#{$break}-reset, .item-#{$break}-reset { order: -1; }
-      .bench-#{$break}-last, .item-#{$break}-last   { order: -1; }
+      .bench-#{$break}-reset, .item-#{$break}-reset { order: 0; }
+      .bench-#{$break}-last, .item-#{$break}-last   { order: 1; }
     }
   }
 }
