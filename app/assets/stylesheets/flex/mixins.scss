@@ -128,7 +128,7 @@
 
 
 // Generate gyms
-@mixin paint-jobs($variants: $gym-variants) {
+@mixin paint-jobs($variants: $color-variants) {
   @each $variant in map-keys($variants) {
     $value: map-get($variants, $variant);
 
