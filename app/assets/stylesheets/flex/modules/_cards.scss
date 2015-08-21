@@ -3,7 +3,7 @@
 @if $enable-cards {     
 
   .bench {
-    height: 250px;
+    min-height: 250px;
     margin: 5px;
     padding: 10px;
     min-width: 240px;
@@ -26,7 +26,11 @@
     }
 
     & .bench {
-      height: auto; //dev test
+      min-height: auto; //dev test
+    }
+
+    &.test-width {
+      min-width: auto;
     }
   }
 

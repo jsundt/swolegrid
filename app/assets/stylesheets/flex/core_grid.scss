@@ -9,7 +9,6 @@
 }
 
 
-
 // Container with set widths
 .max-reps {
   @include make-container();
@@ -20,7 +19,6 @@
     }
   }
 }
-
 // Fluid container
 .no-max-reps {
   @include make-container();
@@ -35,7 +33,7 @@
     height: 500px;
   }
 
-//Base flex item
+// Base flex item
 .bench {
   flex-grow: 1;
   min-height: 1px;
@@ -44,147 +42,26 @@
   @extend .bench;
   flex-grow: 2;
 }
-.no-bench {
-  @extend .bench;
+
+.juice {
+  flex-grow: 1;
+}
+.no-gains {
   flex-grow: 0;
 }
 
 
-// Flex column reordering
-  .bench-xs-first { order: -1; }
-  .bench-xs-reset { order: 0; }
-  .bench-xs-last { order: 1; }
-
-  @include media-breakpoint-up(sm) {
-    .bench-sm-first { order: -1; }
-    .bench-sm-reset { order: 0; }
-    .bench-sm-last { order: 1; }
-  }
-  @include media-breakpoint-up(md) {
-    .bench-md-first { order: -1; }
-    .bench-md-reset { order: 0; }
-    .bench-md-last { order: 1; }
-  }
-  @include media-breakpoint-up(lg) {
-    .bench-lg-first { order: -1; }
-    .bench-lg-reset { order: 0; }
-    .bench-lg-last { order: 1; }
-  }
-  @include media-breakpoint-up(xl) {
-    .bench-xl-first { order: -1; }
-    .bench-xl-reset { order: 0; }
-    .bench-xl-last { order: 1; }
-  }
-
+  // Flex column reordering
+  @include gen-reorder();
 
   // Set direction
-  .guns-xs      { flex-direction: row; }
-  .leg-day-xs   { flex-direction: column; }
-
-  @include media-breakpoint-up(sm) {
-    .guns-sm      { flex-direction: row; }
-    .leg-day-sm   { flex-direction: column; }
-  }
-  @include media-breakpoint-up(md) {
-    .guns-md      { flex-direction: row; }
-    .leg-day-md   { flex-direction: column; }
-  }
-  @include media-breakpoint-up(lg) {
-    .guns-lg      { flex-direction: row; }
-    .leg-day-lg   { flex-direction: column; }
-  }
-  @include media-breakpoint-up(xl) {
-    .guns-xl      { flex-direction: row; }
-    .leg-day-xl   { flex-direction: column; }
-  }
-
+  @include gen-directions();
 
   // Horizontal align items in row
-  .guns-xs-start    { justify-content: flex-start; }
-  .guns-xs-center   { justify-content: center; }
-  .guns-xs-end      { justify-content: flex-end; }
-
-  @include media-breakpoint-up(sm) {
-    .guns-sm-start    { justify-content: flex-start; }
-    .guns-sm-center   { justify-content: center; }
-    .guns-sm-end      { justify-content: flex-end; }
-  }
-  @include media-breakpoint-up(md) {
-    .guns-md-start    { justify-content: flex-start; }
-    .guns-md-center   { justify-content: center; }
-    .guns-md-end      { justify-content: flex-end; }
-  }
-  @include media-breakpoint-up(lg) {
-    .guns-lg-start    { justify-content: flex-start; }
-    .guns-lg-center   { justify-content: center; }
-    .guns-lg-end      { justify-content: flex-end; }
-  }
-  @include media-breakpoint-up(xl) {
-    .guns-xl-start    { justify-content: flex-start; }
-    .guns-xl-center   { justify-content: center; }
-    .guns-xl-end      { justify-content: flex-end; }
-  }
-
+  @include gen-justify();
 
   // Alignment for every item in row
-  .swole-xs-top    { align-items: flex-start; }
-  .swole-xs-center { align-items: center; }
-  .swole-xs-stretch{ align-items: stretch; }
-  .swole-xs-bottom { align-items: flex-end; }
+  @include gen-align-items();
 
-  @include media-breakpoint-up(sm) {
-    .swole-sm-top    { align-items: flex-start; }
-    .swole-sm-center { align-items: center; }
-    .swole-sm-stretch{ align-items: stretch; }
-    .swole-sm-bottom { align-items: flex-end; }
-  }
-  @include media-breakpoint-up(md) {
-    .swole-md-top    { align-items: flex-start; }
-    .swole-md-center { align-items: center; }
-    .swole-md-stretch{ align-items: stretch; }
-    .swole-md-bottom { align-items: flex-end; }
-  }
-  @include media-breakpoint-up(lg) {
-    .swole-lg-top    { align-items: flex-start; }
-    .swole-lg-center { align-items: center; }
-    .swole-lg-stretch{ align-items: stretch; }
-    .swole-lg-bottom { align-items: flex-end; }
-  }
-  @include media-breakpoint-up(xl) {
-    .swole-xl-top    { align-items: flex-start; }
-    .swole-xl-center { align-items: center; }
-    .swole-xl-stretch{ align-items: stretch; }
-    .swole-xl-bottom { align-items: flex-end; }
-  }
-
-
-  // Alignment per item
-  .bench-xs-top    { align-self: flex-start; }
-  .bench-xs-center { align-self: center; }
-  .bench-xs-stretch{ align-self: stretch; height: auto !important; }
-  .bench-xs-bottom { align-self: flex-end; }
-
-  @include media-breakpoint-up(sm) {
-    .bench-sm-top    { align-self: flex-start; }
-    .bench-sm-center { align-self: center; }
-    .bench-sm-stretch{ align-self: stretch; height: auto !important; }
-    .bench-sm-bottom { align-self: flex-end; }
-  }
-  @include media-breakpoint-up(md) {
-    .bench-md-top    { align-self: flex-start; }
-    .bench-md-center { align-self: center; }
-    .bench-md-stretch{ align-self: stretch; height: auto !important; }
-    .bench-md-bottom { align-self: flex-end; }
-  }
-  @include media-breakpoint-up(lg) {
-    .bench-lg-top    { align-self: flex-start; }
-    .bench-lg-center { align-self: center; }
-    .bench-lg-stretch{ align-self: stretch; height: auto !important; }
-    .bench-lg-bottom { align-self: flex-end; }
-  }
-  @include media-breakpoint-up(xl) {
-    .bench-xl-top    { align-self: flex-start; }
-    .bench-xl-center { align-self: center; }
-    .bench-xl-stretch{ align-self: stretch; height: auto !important; }
-    .bench-xl-bottom { align-self: flex-end; }
-  }
+  // Alignment for every item in row
+  @include gen-align-self();

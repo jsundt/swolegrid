@@ -1,7 +1,5 @@
 /*
-
-  Default values
-
+** Default values
 */
 
 $night:                     #000 !default;
@@ -15,25 +13,26 @@ $white:                     #fff !default;
 
 $brand-primary:             #0275d8 !default;
 $brand-secondary:           #0275d8 !default;
+
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
 $brand-danger:              #d9534f !default;
 
+
 $body-bg:                   $gray-lightest !default;
 $body-color:                $gray-dark !default;
 $text-muted:                $gray-light !default;
 
+$link-color:                $body-color !default;
+$link-hover-color:          $brand-primary !default;
+$link-hover-decoration:     underline !default;
 
 $font-family-base:          "helvetica neue", helvetica, arial, sans-serif;
 $font-size-root:            16px !default;
 $font-size-base:            16px !default;
 $line-height:               1.4em !default;
 
-
-$link-color:                $body-color !default;
-$link-hover-color:          $brand-primary !default;
-$link-hover-decoration:     underline !default;
 
 
 // Options
