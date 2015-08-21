@@ -2,13 +2,20 @@
 <html>
 <head>
   <title>Swolegrid</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%= render 'shared/css_loader' %>
+  <%= render 'shared/favicons' %>
+
 </head>
 <body>
+  <%= render 'shared/icon_sprite' %>
+  <%= render 'layouts/header' %>
 
-<%= yield %>
+  <%= yield %>
 
+  <%= render 'layouts/footer' %>
+  <%= render 'shared/scripts' %>
 </body>
 </html>
