@@ -1,16 +1,20 @@
 //Core grid
-.gym {
+.gym,
+.section {
   padding: 50px 0;
-  
-  @include paint-jobs();
+  @include gen-bg-variants();
 }
-.room {
-  @include paint-jobs();
+.room,
+.bg {
+  @include gen-bg-variants();
 }
-
+.text {
+  @include gen-color-variants();
+}
 
 // Container with set widths
-.max-reps {
+.max-reps,
+.container {
   @include make-container();
 
   @each $breakpoint, $container-max-width in $container-max-widths {
@@ -20,33 +24,36 @@
   }
 }
 // Fluid container
-.no-max-reps {
+.no-max-reps,
+.container-fluid {
   @include make-container();
 }
 
 
 // Rows
-.get-swole {
+.get-swole,
+.row {
   @include make-row();
 }
-  .test-height {
-    height: 500px;
-  }
 
 // Base flex item
-.bench {
+.bench,
+.item {
   flex-grow: 1;
   min-height: 1px;
 }
-.big-bench {
+.big-bench,
+.big-item {
   @extend .bench;
   flex-grow: 2;
 }
 
-.juice {
+.juice,
+.grow {
   flex-grow: 1;
 }
-.no-gains {
+.no-gains,
+.no-grow {
   flex-grow: 0;
 }
 

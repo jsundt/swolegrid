@@ -2,11 +2,13 @@
 // Default card styles
 @if $enable-navbar {     
 
-  .pullup {
+  .pullup,
+  .navbar-push {
     height: 60px;
   }
 
-  .bar {
+  .bar,
+  .navbar {
     @extend .pullup;
 
     width: 100%;
