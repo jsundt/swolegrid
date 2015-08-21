@@ -9,6 +9,8 @@ gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'high_voltage', '~> 2.3.0'
 gem 'jquery-rails'
+gem 'theeleven-flex', github: 'jsundt/theeleven-gems'
+
 
 gem 'heroku-deflater', :group => :production
 gem 'rails_12factor', :group => :production

@@ -3,7 +3,7 @@ A simple grid system for browsers that lift.
 Use with autoprefixer.
 
 
-# basics html grid
+# basic html grid
 
 ```html
 <section class="gym gym--primary"><!-- optional padding and background colour -->
@@ -34,7 +34,7 @@ $grid-breakpoints: (
 ) !default;
 ```
 
-For breakpoint this is created:
+For each breakpoint this is created:
 ```scss
 .bench-#{$break}-first, .item-#{$break}-first { order: -1; }
 .bench-#{$break}-reset, .item-#{$break}-reset { order: 0; }

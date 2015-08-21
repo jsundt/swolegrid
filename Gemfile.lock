@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/jsundt/theeleven-gems.git
+  revision: a28a8a3e65072b5577b1968bf5e6ef7de90673fc
+  specs:
+    theeleven-flex (0.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -149,5 +155,6 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 5.0)
   spring
+  theeleven-flex!
   uglifier (>= 1.3.0)
   web-console (~> 2.0)

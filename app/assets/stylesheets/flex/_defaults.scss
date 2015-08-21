@@ -39,6 +39,7 @@ $line-height:               1.4em !default;
 //
 // Quickly modify global styling by enabling or disabling optional features.
 
+$enable-block:       true !default; //block browsers without flex support (modernizr is needed...)
 $enable-cards:       true !default;
 $enable-navbar:      true !default;
 $enable-tabs:        true !default;
@@ -81,5 +82,5 @@ $color-variants: (
   info: $brand-info,
   warning: $brand-warning,
   night: $night,
-  silver: $silver
+  'silver': $silver
 ) !default;
